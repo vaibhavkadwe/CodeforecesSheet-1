@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main(){
+    char x;
+    cin>>x;
+    int y;
+    if(x>=65 && x<=90){
+        y=static_cast<int>(x)+32;
+    }else{
+        y=static_cast<int>(x)-32;
+    }
+    cout<<static_cast<char>(y);
+    return 0;
+}
