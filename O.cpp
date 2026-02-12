@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int x,y;
+    char s;
+    cin>>x>>s>>y;
+    switch(s){
+        case '+':
+            cout<<x+y;
+            break;
+        case '-':
+            cout<<x-y;
+            break;
+        case '*':
+            cout<<x*y;
+            break;
+        case '/':
+            cout<<x/y;
+            break;
+    }
+    return 0;
+}
