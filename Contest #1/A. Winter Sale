@@ -1,0 +1,10 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+int main(){
+    cout<<fixed<<setprecision(2);
+    int x,p;
+    cin>>x>>p;
+    cout<<(p*100.0)/(100-x);
+    return 0;
+}
