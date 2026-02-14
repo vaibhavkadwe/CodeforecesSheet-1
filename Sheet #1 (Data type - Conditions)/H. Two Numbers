@@ -1,0 +1,16 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main(){
+    float a,b;
+    int floor1,ceil1,round1;
+    cin>>a>>b;
+    //Note - It is better to use Math Functions Rather than building logic around this problem
+    floor1=floor(a/b);
+    ceil1=ceil(a/b);
+    round1=round(a/b);
+    cout<<"floor "<<a<<" / "<<b<<" = "<<floor1<<endl;
+    cout<<"ceil "<<a<<" / "<<b<<" = "<<ceil1<<endl;
+    cout<<"round "<<a<<" / "<<b<<" = "<<round1<<endl;
+    return 0;
+}
