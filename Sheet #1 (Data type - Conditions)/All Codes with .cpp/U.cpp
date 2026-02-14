@@ -1,0 +1,15 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+int main(){
+    cout<<fixed<<setprecision(3);
+    float x,decimal;
+    cin>>x;
+    decimal=x-int(x);
+    if(decimal==0){
+        cout<<"int "<<int(x);
+    }else{
+        cout<<"float "<<int(x)<<" "<<decimal;
+    }
+    return 0;
+}
