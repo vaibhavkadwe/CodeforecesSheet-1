@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    bool p=true;
+    for(int j=2;j<=n;j++){
+        p=true;
+        for(int i=2;i*i<=j;i++){
+            if(j%i==0){
+                p=false;
+            }
+        }
+        if(p){
+            cout<<j<<" ";
+        }
+    }
+    return 0;
+}
