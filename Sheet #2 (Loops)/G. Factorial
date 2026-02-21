@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int t;
+    cin>>t;
+    int arr[t];
+    for(int i=0;i<t;i++){
+        cin>>arr[i];
+    }
+    long long fact;
+    for(int i=0;i<t;i++){
+        fact =1;
+        if(arr[i]==0){
+            cout<<1<<endl;
+            continue;
+        }
+        for(int j =1;j<=arr[i];j++){
+            fact=fact*j;
+        }
+        cout<<fact<<endl;
+    }
+    return 0;
+}
