@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int n,a,b;
+    cin>>n>>a>>b;
+    int x,y;
+    int z=0;
+    int sum =0;
+    for(int i=1;i<=n;i++){
+        x=i;
+        z=0;
+        while(x>0){
+            y=x%10;
+            x=x/10;
+            z=z+y;
+        }
+        if(z>=a && z<=b){
+            sum=sum+i;
+        }
+    }
+    cout<<sum;
+    return 0;
+}
