@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    int* arr = new int[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    int* arr2 = new int[n];
+    for(int i=0;i<n;i++){
+        arr2[i]=arr[(n-1)-i];
+    }
+    bool c = true;
+    for(int i=0;i<n;i++){
+        if(arr2[i]==arr[i]){
+            continue;
+        }else{
+            cout<<"NO";
+            return 0;
+        }
+    }
+    if(c){
+        cout<<"YES";
+    }
+
+    delete[] arr;
+    delete[] arr2;
+    return 0;
+}

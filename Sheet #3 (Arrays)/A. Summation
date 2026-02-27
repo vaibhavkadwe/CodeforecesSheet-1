@@ -1,0 +1,25 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    //We use new and delete to dynamically allocate memory for variable length array
+    int* arr= new int[n];
+
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+
+    long long sum=0;
+
+    for(int i=0;i<n;i++){
+        sum=sum+arr[i];
+    }
+
+    cout<<abs(sum);
+
+    //NEVER EVER forget to delete the allocated memory
+    delete[] arr;
+    return 0;
+}
