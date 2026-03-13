@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int t;
+    cin>>t;
+    int n;
+    int* Tarray= new int[t];
+    for(int i=0;i<t;i++){
+        cin>>n;
+        int* arr = new int[n];
+        for(int i=0;i<n;i++){
+            cin>>arr[i];
+        }
+        int min=arr[0]+arr[1]+1;
+        int temp;
+        for(int i=0;i<n;i++){
+            for(int j=i+1;j<n;j++){
+                temp =arr[i]+arr[j]+j-i;
+                if(min>temp){
+                    min=temp;
+                }
+            }
+        }
+        Tarray[i]=min;
+        delete[] arr;
+    }
+    for(int i=0;i<t;i++){
+        cout<<Tarray[i]<<endl;
+    }
+    delete[] Tarray;
+    return 0;
+}
