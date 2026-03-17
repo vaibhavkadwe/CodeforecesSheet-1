@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n,k;
+    cin>>n>>k;
+    int* arr = new int[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    int min=arr[0];
+    for(int i=0;i<n;i+=k){
+        min=arr[i];
+        for(int j=i;j<(i+k) && j<n;j++){
+            if(arr[j]<min){
+                min=arr[j];
+            }
+        }
+        cout<<min<<" ";
+    }
+    delete[] arr;
+    return 0;
+}
